@@ -1,16 +1,12 @@
 from random import randint
 
-#Import the stuffs
-#Take in dice type from user vs options given
-#Return random result in that given range
-
-#Add ability to roll multiple times? Combination of types of dice?
-#Add ability to 
-
+print("Greetings!")
 dice_type = int(input("What kind of dice are we rolling?: (2, 3, 4, 6, 8, 10, 12, 20, or 100) "))
-options = [2, 3, 4, 6, 10, 12, 20, 100]
+dice_num = int(input("Okay, and how many of those are we rolling?"))
+type_optns = range(1, 100)
+num_optn = range(1, 50)
 
-if dice_type in options:
+if dice_type in type_optns:
     if dice_type == 2:
         print("The result of the throw:", randint(1, 2))
     elif dice_type == 3:
