@@ -2,12 +2,36 @@ import random
 
 class DiceRoller:
     def __init__(self):
-        self.rolls = []
+        self.comp_rolls = []
     
-    def num_of_sides(self, sides: int):
+    def Roll(self, num_of_dice: int, num_of_sides: int):
+        self.num_of_dice = num_of_dice
+        self.num_of_sides = num_of_sides
+        self.current_rolls = current_rolls
+        current_rolls = []
 
+        for current_rolls in range(num_of_dice):
+            self.comp_rolls.append(random.randint(1, self.num_of_sides))
+            return self.comp_rolls
+
+class DRApp:
+    def __init__(self):
+        self.dice_roller = DiceRoller
+
+    def help(self):
+        print("Greetings!")
+        print("Commands:")
+        print("0 exit")
+        print("1 roll")
     
-    def num_of_roles(self, rolls: int):
-        rolls_left = 0
-        if rolls > rolls_left:
-            
+    def execute(self):
+        self.help()
+        while True:
+            print("")
+            command = input("Command:")
+            if command == "0":
+                break
+            elif command == "1":
+                num_of_dice = int(input("Okay, how many dice do we need?: "))
+                num_of_sides = int(input("Gotcha, and how many sides do the dice have?: "))
+                self.dice_roller.Roll(num_of_dice, num_of_sides)
