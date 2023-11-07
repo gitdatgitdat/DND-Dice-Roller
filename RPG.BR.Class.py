@@ -2,12 +2,10 @@ import random
 
 class DiceRoller:
     def __init__(self):
+        self = self
         self.comp_rolls = []
     
     def Roll(self, num_of_dice: int, num_of_sides: int):
-        self.num_of_dice = num_of_dice
-        self.num_of_sides = num_of_sides
-        self.current_rolls = current_rolls
         current_rolls = []
 
         for current_rolls in range(num_of_dice):
@@ -35,3 +33,5 @@ class DRApp:
                 num_of_dice = int(input("Okay, how many dice do we need?: "))
                 num_of_sides = int(input("Gotcha, and how many sides do the dice have?: "))
                 self.dice_roller.Roll(num_of_dice, num_of_sides)
+                print(self.comp_rolls)
+
